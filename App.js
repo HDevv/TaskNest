@@ -1,20 +1,54 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState, useEffect } from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { auth } from "./src/utils/firebase";
+import TabNavigator from "./src/navigation/TabNavigator";
+import LoginScreen from "./src/screens/LoginScreen";
+import BoardScreen from "./src/screens/BoardScreen";
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((authUser) => {
+      setUser(authUser ? authUser : null);
+      setLoading(false);
+    });
+    return unsubscribe;
+  }, []);
+
+  if (loading) {
+    return null;
+  }
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        {user ? (
+          <>
+            <Stack.Screen
+              name="Retour"
+              component={TabNavigator}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="Tableau"
+              component={BoardScreen}
+              options={{ title: "Détails du Tableau" }}
+              style={(backgroundColor = "#3B3030")}
+            />
+          </>
+        ) : (
+          <Stack.Screen
+            name="Login"
+            component={LoginScreen}
+            options={{ headerShown: false }}
+          />
+        )}
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

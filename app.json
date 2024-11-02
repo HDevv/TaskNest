@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "TrelloClone",
-    "slug": "TrelloClone",
+    "name": "TaskNest",
+    "slug": "TaskNests",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "dark",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -21,7 +21,7 @@
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/column-decrease_.png"
     }
   }
 }
