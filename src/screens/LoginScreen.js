@@ -10,7 +10,7 @@ import {
 import { LinearGradient } from "expo-linear-gradient";
 import BouncyButton from "../components/atoms/BouncyButton";
 
-// messages d'erreur
+// messages d'erreur (tests)
 const getErrorMessage = (errorCode) => {
   switch (errorCode) {
     case "auth/invalid-email":
@@ -47,7 +47,7 @@ export default function LoginScreen() {
         }
       })
       .catch((err) => {
-        setError(getErrorMessage(err.code)); // Personnaliser message d'erreur
+        setError(getErrorMessage(err.code));
       });
   };
 
@@ -66,7 +66,7 @@ export default function LoginScreen() {
           });
       })
       .catch((err) => {
-        setError(getErrorMessage(err.code)); // Personnaliser message d'erreur
+        setError(getErrorMessage(err.code));
       });
   };
 
@@ -90,7 +90,7 @@ export default function LoginScreen() {
         placeholderTextColor="#999"
       />
       {error ? <Text style={styles.error}>{error}</Text> : null}
-      {message ? <Text style={styles.message}>{message}</Text> : null}{" "}
+      {message ? <Text style={styles.message}>{message}</Text> : null}
       <BouncyButton onPress={handleLogin}>
         <LinearGradient
           colors={["#8BC6EC", "#9599E2"]}
@@ -109,7 +109,7 @@ export default function LoginScreen() {
           style={styles.gradientButtonLogin}
         >
           <Text style={styles.buttonText}>S'INSCRIRE</Text>
-        </LinearGradient>{" "}
+        </LinearGradient>
       </BouncyButton>
     </View>
   );

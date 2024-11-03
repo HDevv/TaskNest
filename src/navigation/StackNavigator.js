@@ -14,7 +14,7 @@ export default function ProjectStackNavigator() {
     <Stack.Navigator
       screenOptions={{
         headerShown: false,
-        cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS, // Glissement horizontal
+        cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS, // Scroll horizontal entre les pages (retour en arrière)
       }}
     >
       <Stack.Screen

@@ -180,7 +180,7 @@ export default function BoardScreen({ route, navigation }) {
             ))}
           </ScrollView>
 
-          {/* Ajouter un champ d'ajout de colonne en bas de l'écran */}
+          {/* Ajouter une colonne */}
           <View style={{ padding: 20 }}>
             <TextInput
               placeholder="Nom de la nouvelle colonne"
