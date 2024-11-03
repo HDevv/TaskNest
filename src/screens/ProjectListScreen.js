@@ -56,7 +56,6 @@ export default function ProjectListScreen({ navigation }) {
     return { backgroundColor };
   });
 
-  // Charger les projets pour l'utilisateur authentifié
   useEffect(() => {
     const user = auth.currentUser;
     if (!user) {
@@ -150,7 +149,7 @@ export default function ProjectListScreen({ navigation }) {
           {projects.map((item, index) => (
             <Animated.View
               key={item.id}
-              style={{ overflow: "hidden" }} // Conteneur extérieur pour l'animation
+              style={{ overflow: "hidden" }}
               entering={FadeInUp.delay(index * 100)} // effet d'apparition
             >
               <View style={styles.projectCard}>

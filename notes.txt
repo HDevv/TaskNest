@@ -1,44 +1,5 @@
-- Revoir le design (logo, couleur sombre ou image en fond ect)
-
-- revoir les bouncy buttons, notamment dans la page login 
-
-- faire le repo 
-
-- ajouter une nouvelle animation (
-    apparition des éléments : taches, colonnes ect, 
-    effet de bulle pour les alertes, 
-    glissement, swipe pour éditer ou supprimer une tache ou colonne, 
-    effet de pulsation des boutons importants,
-    )
-
-------------------------------------------
-MISE AU PROPRE : 
-suppression des commentaires et du code inutile 
-
-ProjectListScreen 
-GlobalStyles
-TaskScreen  
-BoardScreen 
-firebase.js
-
-
-
-------------------------------------------
-
-Suppression / modification des tableaux 0.5 
-
-Animation 1.5pt (transitions animées, interactions visuelles fluides, transitions entre les écrans)
-
-Design 1-2pts (Affiner les styles (espacement, alignements, typographie), Ajouter plus de détails graphiques, comme les ombres, et travailler l'expérience utilisateur pour que le design soit plus professionnel et cohérent.)
-
----------------------------
+-------------------------
 email test : hicham.roldan@livecampus.tech
 mdp : castor17
 ---------------------------
-
-Compte rendu 
-
-ANIMATIONS: 
-Boutons, scroll horizontal pour défiler les pages, transition de couleurs de fond
-Ombres et dégradés 
 

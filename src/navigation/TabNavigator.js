@@ -1,6 +1,6 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import ProjectStackNavigator from "./StackNavigator"; // Stack Navigator pour les projets
+import ProjectStackNavigator from "./StackNavigator";
 import AccountScreen from "../screens/AccountScreen";
 
 const Tab = createBottomTabNavigator();
@@ -10,8 +10,8 @@ export default function TabNavigator() {
     <Tab.Navigator
       screenOptions={{
         tabBarStyle: {
-          backgroundColor: "#1A1A1A", // Couleur de fond de la barre de navigation
-          borderTopColor: "#333333", // Couleur de la bordure du haut
+          backgroundColor: "#1A1A1A", // fond de la barre de navigation
+          borderTopColor: "#333333", // bordure du haut
           paddingBottom: 10,
         },
         tabBarActiveTintColor: "#FBAB7E", // icônes et texte actifs
@@ -20,8 +20,8 @@ export default function TabNavigator() {
     >
       <Tab.Screen
         name="TaskNest"
-        component={ProjectStackNavigator} // Remplacement par le Stack Navigator
-        options={{ headerShown: false }} // Masquer l'en-tête du Stack Navigator dans l'onglet
+        component={ProjectStackNavigator}
+        options={{ headerShown: false }} // Masquer en-tête
       />
       <Tab.Screen name="Compte" component={AccountScreen} />
     </Tab.Navigator>
