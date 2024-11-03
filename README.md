@@ -1,4 +1,4 @@
-# TaskNest
+# TaskNest (Hicham ROLDAN)
 
 TaskNest est une application pour gérer des projets et des tâches créée en utilisant React Native et Firebase. L'application propose une interface conviviale qui permet aux utilisateurs de gérer leurs projets, d'organiser leurs tâches dans des colonnes et de visualiser leurs objectifs de manière claire et efficace.
 
